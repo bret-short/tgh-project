@@ -1,0 +1,38 @@
+<div>
+  <h2>User Registration</h2>
+  <form (ngSubmit)="registerUser()" #registrationForm="ngForm">
+    <!-- First Name -->
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" ngModel required />
+    </div>
+
+    <!-- Last Name -->
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" ngModel required />
+    </div>
+
+    <!-- Middle Initial -->
+    <div>
+      <label for="middleInitial">Middle Initial:</label>
+      <input type="text" id="middleInitial" name="middleInitial" ngModel />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" ngModel required />
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" ngModel />
+    </div>
+
+    <button type="submit" [disabled]="registrationForm.invalid">
+      Register
+    </button>
+  </form>
+</div>
